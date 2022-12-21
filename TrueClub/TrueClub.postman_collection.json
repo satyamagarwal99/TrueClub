@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "e2830dad-837e-4a4c-8fa8-0de66abce8a7",
+		"name": "TrueClub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23014803"
+	},
+	"item": [
+		{
+			"name": "Get All List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjk4NywidXNlcm5hbWUiOiJzZWxsZXIiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9TRUxMRVIifV0sImV4cGlyeVRpbWUiOjg2NDAwMDAwLCJzdWIiOiJzZWxsZXIiLCJpYXQiOjE2NjgxOTM0ODcsImV4cCI6MTY2ODI3OTg4N30.oQES776hq4ey0s4zRRHEylulZo5SiA3MM7MsVqehqO1yQDwu1c_3QDJ-FMAinyctTTgQnRaIRLddX3PHSy0WHw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/"
+			},
+			"response": [
+				{
+					"name": "Get All List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Dec 2022 17:28:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"63a341622eafdd0eb957c77f\",\n        \"name\": \"satyam\",\n        \"emailId\": \"sat@gmail.com\",\n        \"salary\": 34,\n        \"trueClubId\": null\n    },\n    {\n        \"id\": \"98787BHJBH\",\n        \"name\": \"Satyam\",\n        \"emailId\": \"sat@gmail.com\",\n        \"salary\": 34,\n        \"trueClubId\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Save to data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjk4NywidXNlcm5hbWUiOiJzZWxsZXIiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9TRUxMRVIifV0sImV4cGlyeVRpbWUiOjg2NDAwMDAwLCJzdWIiOiJzZWxsZXIiLCJpYXQiOjE2NjgxOTM0ODcsImV4cCI6MTY2ODI3OTg4N30.oQES776hq4ey0s4zRRHEylulZo5SiA3MM7MsVqehqO1yQDwu1c_3QDJ-FMAinyctTTgQnRaIRLddX3PHSy0WHw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"98787BHJBH\",\r\n    \"name\": \"Satyam\",\r\n    \"TrueClubId\":\"687GH\",\r\n    \"emailId\":\"sat@gmail.com\",\r\n    \"salary\": \"34\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/save"
+			},
+			"response": [
+				{
+					"name": "Save to data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"98787BHJBH\",\r\n    \"name\": \"Satyam\",\r\n    \"TrueClubId\":\"687GH\",\r\n    \"emailId\":\"sat@gmail.com\",\r\n    \"salary\": \"34\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/save"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "19"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Dec 2022 17:28:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Your Data has saved"
+				}
+			]
+		},
+		{
+			"name": "Get List By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjk4NywidXNlcm5hbWUiOiJzZWxsZXIiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9TRUxMRVIifV0sImV4cGlyeVRpbWUiOjg2NDAwMDAwLCJzdWIiOiJzZWxsZXIiLCJpYXQiOjE2NjgxOTM0ODcsImV4cCI6MTY2ODI3OTg4N30.oQES776hq4ey0s4zRRHEylulZo5SiA3MM7MsVqehqO1yQDwu1c_3QDJ-FMAinyctTTgQnRaIRLddX3PHSy0WHw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/id/63a341622eafdd0eb957c77f"
+			},
+			"response": [
+				{
+					"name": "Get All List Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/id/63a341622eafdd0eb957c77f"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Dec 2022 17:29:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"63a341622eafdd0eb957c77f\",\n    \"name\": \"satyam\",\n    \"emailId\": \"sat@gmail.com\",\n    \"salary\": 34,\n    \"trueClubId\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All List Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjk4NywidXNlcm5hbWUiOiJzZWxsZXIiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9TRUxMRVIifV0sImV4cGlyeVRpbWUiOjg2NDAwMDAwLCJzdWIiOiJzZWxsZXIiLCJpYXQiOjE2NjgxOTM0ODcsImV4cCI6MTY2ODI3OTg4N30.oQES776hq4ey0s4zRRHEylulZo5SiA3MM7MsVqehqO1yQDwu1c_3QDJ-FMAinyctTTgQnRaIRLddX3PHSy0WHw"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"98787BHJBH\",\r\n    \"name\": \"Satyam\",\r\n    \"TrueClubId\":\"687GH\",\r\n    \"emailId\":\"sat@gmail.com\",\r\n    \"salary\": \"15000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/update"
+			},
+			"response": [
+				{
+					"name": "Get All List Copy 2",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"98787BHJBH\",\r\n    \"name\": \"Satyam\",\r\n    \"TrueClubId\":\"687GH\",\r\n    \"emailId\":\"sat@gmail.com\",\r\n    \"salary\": \"15000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/update"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Dec 2022 17:31:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Your Update has been made"
+				}
+			]
+		},
+		{
+			"name": "Get All List Copy 3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjk4NywidXNlcm5hbWUiOiJzZWxsZXIiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9TRUxMRVIifV0sImV4cGlyeVRpbWUiOjg2NDAwMDAwLCJzdWIiOiJzZWxsZXIiLCJpYXQiOjE2NjgxOTM0ODcsImV4cCI6MTY2ODI3OTg4N30.oQES776hq4ey0s4zRRHEylulZo5SiA3MM7MsVqehqO1yQDwu1c_3QDJ-FMAinyctTTgQnRaIRLddX3PHSy0WHw"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"98787BHJBH\",\r\n    \"name\": \"Satyam\",\r\n    \"TrueClubId\":\"687GH\",\r\n    \"emailId\":\"sat@gmail.com\",\r\n    \"salary\": \"15000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/delete/63a341622eafdd0eb957c77f"
+			},
+			"response": [
+				{
+					"name": "Get All List Copy 3",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"98787BHJBH\",\r\n    \"name\": \"Satyam\",\r\n    \"TrueClubId\":\"687GH\",\r\n    \"emailId\":\"sat@gmail.com\",\r\n    \"salary\": \"15000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/delete/63a341622eafdd0eb957c77f"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Dec 2022 17:32:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Stocks Deleted corresponding to student"
+				}
+			]
+		}
+	]
+}
